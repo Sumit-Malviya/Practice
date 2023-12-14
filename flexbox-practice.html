@@ -1,0 +1,93 @@
+<!--Revising what flex brings onto the table-->
+<!-- 1. you need your elements to wrap in a container to use this display property-->
+<!-- 2. We have properties like flex and flex-direction to convert div into flex and align elements inside the div horizontally or vertically-->
+<!-- 3. Pro tip use border to see how your flex div is behaving -->
+<!--4. justify content start, center, end-->
+<!--5. justify-content space-between-->
+<!--6. elements are usually strecth inside their flex container as default use Align-item to align and resize elements VERTICALLY-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Practice</title>
+  </head>
+  <body style="padding-bottom: 1000px">
+    <!--flex box requires an outer div or container, and this container will going
+    to be flex box and these elements will going to be placed inside this
+    flexbox-->
+    <div style="display: flex; flex-direction: row">
+      <!--flex property to convert the div into flex box and flex direction to align elements horizontally or vertically-->
+
+      <!--Note: elements of flex box only takes as much space as they need-->
+      <div style="background-color: lightblue">div 1 text</div>
+      <div style="background-color: lightpink">
+        div 2
+        <p>text 2</p>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 30px">
+      <div style="background-color: lightblue; width: 100px">100px</div>
+      <div style="background-color: lightpink; flex: 1">flex: 1</div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 30px">
+      <div style="background-color: lightblue; width: 100px">100px</div>
+      <div style="background-color: lightpink; flex: 1">flex: 1</div>
+      <div style="background-color: lightblue; flex: 2">flex: 2</div>
+    </div>
+
+    <!--justify-content always shift the inside div from right, left and center
+    Or how inside elements are laid out horizontally-->
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        height: 70px;
+        border: 1px solid black;
+        justify-content: center;
+      "
+    >
+      <div style="background-color: lightblue; width: 100px">100px</div>
+      <div style="background-color: lightpink; width: 100px">100px</div>
+      <div style="background-color: lightblue; width: 100px">100px</div>
+    </div>
+
+    <!--Place elements with equal amount of space in between them-->
+
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        height: 70px;
+        border: 1px solid black;
+        justify-content: space-between;
+      "
+    >
+      <div style="background-color: lightblue; width: 100px">100px</div>
+      <div style="background-color: lightpink; width: 100px">100px</div>
+      <div style="background-color: lightblue; width: 100px">100px</div>
+    </div>
+
+    <!--Aligning elements vertically-->
+    <!--Align items has to do with how elements align vertically within the flex container -->
+
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        height: 70px;
+        border: 1px solid black;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <div style="background-color: lightblue; width: 100px">100px</div>
+      <div style="background-color: lightpink; width: 100px">100px</div>
+      <div style="background-color: lightblue; width: 100px">100px</div>
+    </div>
+  </body>
+</html>
